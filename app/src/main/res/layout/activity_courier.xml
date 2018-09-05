@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.CourierActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+
+        <RelativeLayout
+            android:id="@+id/courier_fanhui"
+            android:layout_width="43dp"
+            android:layout_height="match_parent"/>
+
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:src="@drawable/fanhui"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="快递"
+            android:textColor="#000"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#cacaca"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/courier_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="请输入快递公司(支持:邮政,韵达,顺丰,中、圆、申通)"
+            android:textSize="16dp"
+            android:paddingLeft="10dp" />
+
+
+        <EditText
+            android:id="@+id/et_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="请输入快递单号"
+            android:textSize="16dp"
+            android:paddingLeft="10dp" />
+
+
+        <Button
+            android:id="@+id/btn_get_courier"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:text="查询"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:background="@drawable/biankuang3"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/courier_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+
+
+
+
+</LinearLayout>

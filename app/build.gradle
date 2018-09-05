@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.xiangmu"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    implementation 'cn.bmob.android:bmob-sdk:3.6.3'
+    implementation 'com.android.support:design:28.0.0-alpha3'
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //circleimageview头像编辑
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //picasso图片框架
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //    百度地图的
+    implementation files('libs/BaiduLBS_Android.jar')
+    //    二维码
+    implementation project(path: ':libzxing')
+//    极光推送
+    implementation files('libs/jcore-android-1.2.3.jar')
+//    添加okttp2.0
+    implementation('com.zhy:okhttputils:2.0.0') {
+        exclude group: 'com.google.code.gson', module: 'gson'
+        exclude group: 'com.squareup.okio', module: 'okio'
+    }
+
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+
+
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <Button
+            android:id="@+id/putong"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffff"
+            android:text="普通地图"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/weixing"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffff"
+            android:text="卫星地图"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/kongbai"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffff"
+            android:text="空白地图"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btn_pop_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffff"
+            android:text="取消"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

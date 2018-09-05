@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:background="@drawable/beijingtu"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="28dp" />
+
+
+            <TextView
+                android:id="@+id/edit_user"
+                android:layout_width="84dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="编辑资料"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/edit_user1"
+                android:layout_width="84dp"
+                android:layout_height="25dp"
+                android:layout_below="@+id/profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="请登录"
+                android:visibility="gone"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+
+        </RelativeLayout>
+
+
+
+
+        <!--设置-->
+        <RelativeLayout
+            android:id="@+id/user_shezhi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+               android:layout_alignParentTop="true"
+                android:background="#cacaca" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="设置"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/jinru" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cacaca" />
+
+        </RelativeLayout>
+
+
+
+
+        <!--快递查询-->
+        <RelativeLayout
+            android:id="@+id/user_kuaidi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="快递"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/jinru" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cacaca" />
+
+        </RelativeLayout>
+
+
+
+
+
+        <!--号码归属地查询-->
+        <RelativeLayout
+            android:id="@+id/user_phone"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="50dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="号码归属地查询"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/jinru" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#cacaca" />
+
+        </RelativeLayout>
+
+
+
+
+
+
+        <!--退出登录以及登录-->
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="100dp">
+
+
+           <Button
+               android:id="@+id/btn_exit_user"
+               android:layout_width="match_parent"
+               android:layout_height="42dp"
+               android:layout_marginLeft="55dp"
+               android:layout_marginRight="55dp"
+               android:background="@drawable/biankuang1"
+               android:text="退出登录"
+               android:textColor="#fff"
+               android:textSize="15dp" />
+
+
+           <Button
+               android:id="@+id/btn_exit_user1"
+               android:layout_width="match_parent"
+               android:layout_height="42dp"
+               android:layout_marginBottom="10dp"
+               android:layout_marginLeft="55dp"
+               android:layout_marginRight="55dp"
+               android:background="@drawable/biankuang1"
+               android:text="登录"
+               android:visibility="gone"
+               android:textColor="#fff"
+               android:textSize="15dp" />
+
+
+       </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
